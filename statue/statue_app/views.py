@@ -8,7 +8,7 @@ from .serializers import StatueSerializer
 @api_view(['GET', 'POST'])
 def statue_list(request):
     if request.method == 'GET':
-        statues = Statue.objects.all()
+        statues = Statue.objects.all().order_by('-id')  # Show latest first
         serializer = StatueSerializer(statues, many=True)
         return Response(serializer.data)
 
