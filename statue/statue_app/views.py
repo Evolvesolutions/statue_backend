@@ -2,8 +2,9 @@ from django.shortcuts import get_object_or_404
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from rest_framework import status
-from .models import Statue
-from .serializers import StatueSerializer
+from .models import Statue,Home_list
+from .serializers import StatueSerializer,Home_listSerializer
+
 
 
 
