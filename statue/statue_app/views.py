@@ -2,8 +2,8 @@ from django.shortcuts import get_object_or_404
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from rest_framework import status
-from .models import Statue,Home_list
-from .serializers import StatueSerializer,Home_listSerializer
+from .models import Statue
+from .serializers import StatueSerializer
 
 
 
@@ -31,3 +31,4 @@ def statue_detail(request, pk):
     statue = get_object_or_404(Statue, pk=pk)
     serializer = StatueSerializer(statue)
     return Response(serializer.data)
+
