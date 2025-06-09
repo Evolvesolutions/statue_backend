@@ -5,6 +5,9 @@ from rest_framework import status
 from .models import Statue
 from .serializers import StatueSerializer
 
+
+
+
 @api_view(['GET', 'POST'])
 def statue_list(request):
     if request.method == 'GET':
